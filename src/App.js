@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+import React from 'react';
+import FormComponent from './Components/FillableForm';
+import DoubleFormComponent from './Components/FillableForm2';
+import InputField from './Components/InputField';
 import './App.css';
 
+const Styles = () => {
+  return (
+    <div className="my-style">
+      <h2>MyStyle</h2>
+      <button className="button">Submit</button>
+    </div>
+  );
+};
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>My React App</h1>
+      <FormComponent />
     </div>
+      
   );
 }
 
 export default App;
+
+
+
+
+
+
+
+
+      
+    
+
+
+

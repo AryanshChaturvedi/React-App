@@ -1,5 +1,9 @@
-.App {
+.app {
   text-align: center;
+  display:"flex";
+  flex-direction: "column";
+  align-items: "center";
+  justify-content: "center";
 }
 
 .App-logo {
@@ -14,7 +18,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3f4553;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +39,69 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+body, h1, h2, h3, p {
+
+
+  padding: 20px;
+ 
+  
+}
+
+
+
+
+
+body {
+ 
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+
+}
+
+
+.header {
+  background-color: #007bff;
+  color: #d87d0f;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.main-content {
+  padding: 20px;
+  margin-top: 300px;
+}
+
+
+.button {
+  padding: 20px 20px;
+  background-color: #0fca7c;
+  color: #2857bc;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 20px;
+}
+
+
+
+input {
+  padding: 10px;
+  border: 1px solid #5b5959;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  
+  
+}
+
+textarea {
+  padding: 10px;
+  border: 1px solid #5b5959;
+  border-radius: 5px;
+  margin-bottom:-15px;
+  margin-right: 20px;
+
 }
