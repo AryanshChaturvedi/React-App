@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 const ButtonComponent = styled.button`
   background-color: #0047AB;
-  margin: 19px;
+  margin: 49px;
   color: #FFFFFF;
   padding:  0.4rem;
-  width: ${({ fullWidth }) => fullWidth ? '100%' : '335px'};  &:hover {
+  width: ${({ fullWidth }) => fullWidth ? '100%' : '175px'};  &:hover {
     cursor: pointer;
     opacity: 0.9;
     color: #a72525;

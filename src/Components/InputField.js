@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import styled from 'styled-components'
 
 const Input = styled.input`
-  font-size: 1.5rem
+  font-size: 1.8rem
   color: #BF4F74;
-  background-color: pink;
+  background-color: white;
   margin-left:100px;
+ 
 `
 const Label = styled.label`
   margin-bottom: 1rem;
@@ -20,7 +21,7 @@ const InputField = ({ className, label, type, name, value, onChange }) => {
                 id={name}
                 name={name}
                 value={value}
-                style={{ padding:"2px", margin:"30px" }}
+                style={{ padding:"9px", margin:"20px" }}
                 onChange={onChange}
     
             />
