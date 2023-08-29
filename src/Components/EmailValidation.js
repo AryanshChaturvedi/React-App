@@ -1,23 +1,27 @@
 import React, { useState } from 'react';
 import InputMask from 'react-input-mask';
 
-const EmailField = ({ label, value, onChange }) => {
+const EmailField = ({ label, onChange }) => {
     const [isValidEmail, setIsValidEmail] = useState(true);
-    
+    const [emailData, setemailData] = useState("");
+
     const validateEmail = (email) => {
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const emailPattern = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
         return emailPattern.test(email);
     };
 
     const handleEmailChange = (event) => {
+        console.log("handleEmailChange");
         const newEmail = event.target.value;
-        onChange(newEmail); 
+        const oldValue = emailData;
+        onChange = setemailData(newEmail);
         setIsValidEmail(validateEmail(newEmail));
     };
 
     const handleBlur = () => {
-        if (value && !isValidEmail) {
-            onChange('');
+        console.log("Handle blur");
+        if (emailData && !isValidEmail) {
+            onChange='';
         }
     };
 
@@ -26,7 +30,7 @@ const EmailField = ({ label, value, onChange }) => {
             <label>{label}:</label>
             <input
                 type="email"
-                value={value}
+                value={emailData}
                 onChange={handleEmailChange}
                 onBlur={handleBlur}
                 style={{
